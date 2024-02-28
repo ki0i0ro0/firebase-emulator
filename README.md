@@ -1,12 +1,18 @@
-## Command
+# firebase-emulator
 
-firebase emulators:start
+## firebase emulator を起動
 
-firebase init emulators
+```sh
+docker-compose up -d
+```
 
-firebase emulators:export ./data/
+## ログイン情報
 
-firebase emulators:start --import=./data
+```text
+user:test-user@example.com
+password:12345678
+```
 
-## 参考
-- [Firestore エミュレータのデータをローカル環境で import/export する - Qiita](https://qiita.com/tanabee/items/2ce4d50e5ea320beb0cf)
+## Web UI アクセス
+
+<http://127.0.0.1:4000/auth>
