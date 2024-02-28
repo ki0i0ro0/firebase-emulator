@@ -2,11 +2,11 @@ services:
   firebase-emulator:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./docker/firebase-emulator/Dockerfile
     ports:
       - 9099:9099 # Auth
       - 4000:4000 # Emulator Suite UI
     tty: true
     volumes:
-      - ./data:/home/node/data
-      - ./firebase.json:/home/node/firebase.json
+      - ./docker/firebase-emulator/data:/home/node/data
+      - ./docker/firebase-emulator/firebase.json:/home/node/firebase.json
